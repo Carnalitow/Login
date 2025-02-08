@@ -3,60 +3,7 @@
 <html lang="en" class="flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths js no-mobile desktop no-ie chrome chrome132 cod-section w-1920 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 gt-1440 gt-1680 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface wf-sixcaps-n4-active wf-opensans-n8-active wf-opensans-n4-active wf-active js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase no-indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths domloaded" id="login-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="A/kargTFyk8MR5ueravczef/wIlTkbVk1qXQesp39nV+xNECPdLBVeYffxrM8TmZT6RArWGQVCJ0LRivD7glcAUAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
 		<meta name="description" content="Activision login page">
 		<!-- OneTrust -->
-		<iframe src="./Log in - CALL OF DUTY®_files/capmapping_dmp.html" width="0" height="0" style="display:none;"></iframe><iframe width="0" height="0" style="display:none;" src="./Log in - CALL OF DUTY®_files/saved_resource(1).html"></iframe><iframe width="0" height="0" style="display:none;" src="./Log in - CALL OF DUTY®_files/saved_resource(2).html"></iframe><script async="true" src="./Log in - CALL OF DUTY®_files/eb2546a8-b4c8-4635-8e53-5f4b62ea03c1.js.téléchargement" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./Log in - CALL OF DUTY®_files/js"></script><script async="" src="./Log in - CALL OF DUTY®_files/scevent.min.js.téléchargement"></script><script async="" src="./Log in - CALL OF DUTY®_files/uwt.js.téléchargement"></script><script src="./Log in - CALL OF DUTY®_files/351054740009678" async=""></script><script src="./Log in - CALL OF DUTY®_files/1008502742884104" async=""></script><script async="" src="./Log in - CALL OF DUTY®_files/fbevents.js.téléchargement"></script><script type="text/javascript" async="" src="./Log in - CALL OF DUTY®_files/destination"></script><script type="text/javascript" async="" src="./Log in - CALL OF DUTY®_files/destination(1)"></script><script type="text/javascript" async="" src="./Log in - CALL OF DUTY®_files/destination(2)"></script><script type="text/javascript" async="" charset="utf-8" src="./Log in - CALL OF DUTY®_files/recaptcha__en.js.téléchargement" crossorigin="anonymous" integrity="sha384-P3vOnwOQjXmCJwx1vTvZAroj9OVXiVWsH201GY3AuWFi+LVyRVQwt0M/4hdSxMBf"></script><script src="./Log in - CALL OF DUTY®_files/webfont.js.téléchargement" type="text/javascript" async=""></script><script async="" src="./Log in - CALL OF DUTY®_files/gtm.js.téléchargement"></script><script>
-			var OneTrust = {
-				dataSubjectParams: {
-					id: "",
-					isAnonymous: false,
-					token : ""
-				}
-			};		
-			function otGetCookie (cookieName) {
-				var i = 0,
-					cookies = document.cookie.split(";"),
-					length = cookies.length,
-					trimRegex = /^\s+|\s+$/g,
-					cookiePair;
 
-				for (; i < length; i++) {
-					cookiePair = cookies[i].split('=');				
-					if (cookiePair[0].replace(trimRegex, '') === cookieName) return unescape(cookiePair[1]);
-				}
-			}
-			var loggedIn = otGetCookie("ACT_SSO_COOKIE") || otGetCookie("s_ACT_SSO_COOKIE") || false;
-			if(loggedIn) {
-				var site = "cod";
-				var xsrfToken = otGetCookie("XSRF-TOKEN");
-				fetch("/" + site + "/regulations/onetrust/auth", {
-					method: "POST",
-					headers: {
-						"X-XSRF-TOKEN": xsrfToken
-					}
-				})
-				.then((response) => response.json())
-				.then((json) => {
-					OneTrust = {
-						dataSubjectParams: {
-							id: json.userId,
-							isAnonymous: false,
-							token : json.token
-						}
-					};
-				});
-			}
-			window.addEventListener("OneTrustGroupsUpdated", handleOneTrustGroupsUpdated);
-		    function handleOneTrustGroupsUpdated() {
-				if(loggedIn) {
-					var site = "cod";
-					var xsrfToken = otGetCookie("XSRF-TOKEN");
-					fetch("/" + site + "/regulations/onetrust/preferences?activeGroups=" + OnetrustActiveGroups, {
-							method: "POST",
-							headers: {
-								"X-XSRF-TOKEN": xsrfToken
-							}
-					});
-				}
-			}
 		</script>
 		<!--END OneTrust -->
 		
